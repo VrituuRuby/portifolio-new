@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        blobSpin: {
+          from: { rotate: "0deg" },
+          to: { rotate: "360deg" },
+        },
+      },
+      animation: {
+        "blob-spin": "blobSpin 10s linear infinite",
+      },
       colors: {
         "dark-blue": "#15151E",
       },
