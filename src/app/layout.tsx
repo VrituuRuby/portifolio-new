@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} scroll-smooth`}>
         <CursorBlob />
-        <div className="backdrop-blur-[150px] -z-10 absolute left-0 top-0 w-screen h-screen" />
+        <div className="backdrop-blur-[80px] -z-10 absolute left-0 top-0 w-screen h-screen" />
         {children}
       </body>
     </html>

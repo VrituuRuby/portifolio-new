@@ -16,8 +16,6 @@ const DecodeEffect: React.FC<DecodeEffectProps> = ({
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-  useEffect(randomize, []);
-
   function randomize() {
     let iterations = 0;
     const interval = setInterval(() => {

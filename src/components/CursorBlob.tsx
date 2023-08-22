@@ -15,7 +15,7 @@ const CursorBlob: React.FC = () => {
             left: `${clientX}px`,
             top: `${clientY}px`,
           },
-          { duration: 3000, fill: "forwards" }
+          { duration: 5000, fill: "forwards" }
         );
     });
   }, []);
@@ -32,14 +32,14 @@ const CursorBlob: React.FC = () => {
         <defs>
           <linearGradient id="0" x1="0.15" y1="0.85" x2="0.85" y2="0.15">
             <stop offset="0%" stopColor="#ff0055" />
-            <stop offset="33.33%" stopColor="#1ba0ec" />
-            <stop offset="100%" stopColor="#c8f112" />
+            <stop offset="33.33%" stopColor="#ec1bda" />
+            <stop offset="100%" stopColor="#00aeff" />
           </linearGradient>
         </defs>
         <path fill="url(#0)" transform="translate(100 100)">
           <animate
             attributeName="d"
-            dur="5s"
+            dur="10s"
             repeatCount="indefinite"
             values="M34.6,-62.8C41.3,-56.1,40.9,-39.7,44.5,-27.6C48.2,-15.6,55.9,-7.8,62.7,3.9C69.4,15.6,75.2,31.2,68.9,38.5C62.5,45.9,44,44.9,30.4,47.8C16.9,50.7,8.5,57.4,-3.8,64C-16.1,70.6,-32.2,77.1,-36.2,68.7C-40.1,60.3,-31.9,37,-36.5,23.1C-41.2,9.1,-58.7,4.6,-63.1,-2.6C-67.6,-9.7,-59,-19.4,-52.3,-29.8C-45.6,-40.2,-40.8,-51.2,-32.4,-57C-23.9,-62.8,-12,-63.4,1,-65.1C13.9,-66.8,27.9,-69.6,34.6,-62.8Z;
 
