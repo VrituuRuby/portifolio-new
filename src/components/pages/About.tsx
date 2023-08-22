@@ -2,7 +2,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
-import Image from "next/image";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 const rubik = Rubik({ subsets: ["latin"] });
@@ -69,7 +68,7 @@ const About: React.FC = () => {
         <h3
           className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
         >
-          &lt;about&gt;
+          &lt;ABOUT&gt;
         </h3>
         <div className="flex-1 flex gap-8 items-center text-white">
           <motion.img
@@ -112,7 +111,7 @@ const About: React.FC = () => {
         <h3
           className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
         >
-          &lt;stack&gt;
+          &lt;STACK&gt;
         </h3>
         <ul className="flex flex-row flex-wrap gap-1 justify-center list-none">
           {stackIcons.map((icon, index) => (

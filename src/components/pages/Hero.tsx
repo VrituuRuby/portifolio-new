@@ -5,9 +5,14 @@ import { PiCaretDown } from "react-icons/pi";
 
 const rubik = Rubik({ weight: "800", subsets: ["latin"] });
 
-const Hero: React.FC = () => {
+interface HomeProps {
+  setInViewLink: (link: string) => void;
+}
+
+const Hero: React.FC<HomeProps> = ({ setInViewLink }) => {
   return (
     <div
+      id="home"
       className={`${rubik.className} w-full h-screen snap-end text-white font-bold text-8xl flex flex-col items-center relative p-4`}
     >
       <div className="flex-1 flex flex-col justify-center items-center">

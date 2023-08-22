@@ -1,14 +1,23 @@
-import About from "@/components/About";
-import CursorBlob from "@/components/CursorBlob";
-import Hero from "@/components/Hero";
+"use client";
+import Sidebar from "@/components/Sidebar";
+import About from "@/components/pages/About";
+import Hero from "@/components/pages/Hero";
+import Projects from "@/components/pages/Projects";
+import React from "react";
 
-export default function Main() {
+const Main: React.FC = () => {
+  const [activeLink, setActiveLink] = React.useState("home");
+
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory px-4">
-      <CursorBlob />
-      <div className="backdrop-blur-[150px] -z-10 absolute left-0 top-0 w-screen h-screen" />
-      <Hero />
-      <About />
+    <div className="flex">
+      <Sidebar />
+      <div className="h-screen flex-1 overflow-y-auto snap-y snap-mandatory px-4 scroll-smooth">
+        <Hero setInViewLink={setActiveLink} />
+        <About />
+        <Projects />
+      </div>
     </div>
   );
-}
+};
+
+export default Main;

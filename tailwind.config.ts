@@ -15,7 +15,7 @@ const config: Config = {
         },
       },
       animation: {
-        "blob-spin": "blobSpin 10s linear infinite",
+        "blob-spin": "blobSpin 5s linear infinite",
       },
       colors: {
         "dark-blue": "#15151E",
