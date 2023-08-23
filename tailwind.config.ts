@@ -19,6 +19,7 @@ const config: Config = {
       },
       colors: {
         "dark-blue": "#15151E",
+        "button-blue": "#1D2733",
       },
       dropShadow: {
         glow: "0 0 4px rgba(255,255,255,0.6)",

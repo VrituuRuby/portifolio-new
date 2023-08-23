@@ -1,8 +1,9 @@
 "use client";
 import Sidebar from "@/components/Sidebar";
-import About from "@/components/pages/About";
-import Hero from "@/components/pages/Hero";
-import Projects from "@/components/pages/Projects";
+import About from "@/pages/About";
+import { Contact } from "@/pages/Contact";
+import Hero from "@/pages/Hero";
+import Projects from "@/pages/Projects";
 import React from "react";
 
 const Main: React.FC = () => {
@@ -15,6 +16,7 @@ const Main: React.FC = () => {
         <Hero setInViewLink={setActiveLink} />
         <About />
         <Projects />
+        <Contact />
       </div>
     </div>
   );
