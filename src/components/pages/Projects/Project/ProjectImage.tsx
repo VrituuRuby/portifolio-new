@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ProjectProps {
@@ -7,6 +8,12 @@ interface ProjectProps {
 
 export const ProjectImage: React.FC<ProjectProps> = ({ path, alt }) => {
   return (
-    <img src={path} className="object-cover rounded-md w-[320px]" alt={alt} />
+    <Image
+      src={path}
+      className="object-cover rounded-md w-[320px]"
+      height={200}
+      width={320}
+      alt={alt}
+    />
   );
 };
