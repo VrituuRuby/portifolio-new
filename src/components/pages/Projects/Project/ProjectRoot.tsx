@@ -21,7 +21,6 @@ const projectVariants: Variants = {
     scale: 1.02,
     transition: {
       type: "tween",
-      delay: 0,
       duration: 0.2,
     },
   },
@@ -41,8 +40,9 @@ export const ProjectRoot: React.FC<ProjectRootProps> = ({
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
+      whileHover="hover"
       custom={index}
-      className={`group flex gap-4 text-white hover:bg-white/20 transition-colors cursor-default p-4 rounded-lg`}
+      className="group flex flex-col items-center text-white lg:flex-row"
     >
       {children}
     </motion.article>

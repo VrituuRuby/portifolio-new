@@ -18,14 +18,14 @@ export const ProjectContent: React.FC<ProjectProps> = ({
   children,
 }) => {
   return (
-    <div className="flex-1 flex flex-col gap-4 justify-between ">
+    <div className="flex flex-col justify-between items-center lg:items-start gap-3 p-4">
       <h3
         className={`${spaceMono.className} text-2xl font-bold flex items-center gap-2 before:w-3 before:h-3 before:bg-white`}
       >
         {name}
       </h3>
       <p className="flex-1">{description}</p>
-      <ul className="list-none flex gap-2 text-sm">
+      <ul className="list-none flex flex-wrap justify-center md:justify-start gap-2 text-sm">
         {stack.map((tech) => (
           <li key={tech}>{tech}</li>
         ))}

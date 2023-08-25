@@ -10,12 +10,12 @@ const Main: React.FC = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="h-screen flex-1 overflow-y-auto snap-y snap-mandatory px-4 scroll-smooth">
+      <main className="flex-1 flex flex-col justify-between gap-4 h-screen overflow-y-scroll md:snap-mandatory md:snap-y scroll-smooth p-4 overflow-x-clip">
         <Hero />
         <About />
         <Projects />
         <Contact />
-      </div>
+      </main>
     </div>
   );
 };

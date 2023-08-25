@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
+import { TechIcon } from "./TechIcon";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 const rubik = Rubik({ subsets: ["latin"] });
@@ -34,43 +35,24 @@ const container: Variants = {
   },
 };
 
-const items: Variants = {
-  hidden: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      duration: 0,
-    },
-  },
-  visible: (index: number) => {
-    return {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: index * 0.05,
-      },
-    };
-  },
-};
-
 const About: React.FC = () => {
   return (
     <div
-      className="w-full h-screen flex flex-col justify-center items-center snap-end overflow-x-hidden"
+      className="flex flex-col md:min-h-screen justify-center items-center snap-end"
       id="about"
     >
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl"
+        className="flex flex-col max-w-5xl gap-2"
       >
         <h3
-          className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
+          className={`${spaceMono.className} w-full text-white text-center text-3xl font-bold drop-shadow-glow`}
         >
           &lt;ABOUT&gt;
         </h3>
-        <div className="flex-1 flex gap-8 items-center text-white">
+        <div className="md:flex-row md:gap-8 flex-col flex-1 flex items-center text-white">
           <motion.img
             src="/avatar.png"
             alt="Avatar"
@@ -86,11 +68,13 @@ const About: React.FC = () => {
             className="select-none"
           >
             <h3
-              className={`${spaceMono.className} text-3xl font-bold py-4 drop-shadow-glow`}
+              className={`${spaceMono.className} text-2xl text-center md:text-left md:text-3xl font-bold py-2 drop-shadow-glow`}
             >
               HELLO WORLD
             </h3>
-            <p className={`${rubik.className} text-lg drop-shadow-glow`}>
+            <p
+              className={`${rubik.className} text-sm md:text-base drop-shadow-glow`}
+            >
               I'm a fullstack developer who loves creating visually appealing
               and functional designs. Currently, I'm working on personal
               portfolio projects and exploring new technologies. <br />
@@ -106,33 +90,22 @@ const About: React.FC = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl w-full"
+        className="flex flex-col max-w-5xl w-full gap-2"
       >
         <h3
-          className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
+          className={`${spaceMono.className} w-full text-white text-center text-3xl drop-shadow-glow font-bold`}
         >
           &lt;STACK&gt;
         </h3>
-        <ul className="flex flex-row flex-wrap gap-1 justify-center list-none">
-          {stackIcons.map((icon, index) => (
-            <motion.li
-              className="group rounded-full grid place-items-center p-2 bg-dark-blue/75 shadow-md w-14 h-14 aspect-square relative cursor-pointer"
-              key={icon.name}
-              variants={items}
-              initial="hidden"
-              whileInView="visible"
-              custom={index}
-            >
-              <span
-                className="absolute top-full left-1/2 -translate-x-1/2 p-1 bg-black/70 rounded-lg flex 
-              invisible justify-center items-center text-center text-white z-10 w-24 opacity-0 mt-1 group-hover:opacity-100 group-hover:visible transition-opacity before:absolute before:bottom-full before:left-1/2 before:border-[5px] before:border-transparent before:border-b-black/70 before:-translate-x-1/2"
-              >
-                {icon.name}
-              </span>
-              <img src={icon.iconPath} alt={icon.name} width={32} />
-            </motion.li>
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          className="flex flex-row flex-wrap gap-1 justify-center list-none"
+        >
+          {stackIcons.map(({ iconPath, name }, index) => (
+            <TechIcon key={name} icon={iconPath} name={name} index={index} />
           ))}
-        </ul>
+        </motion.ul>
       </motion.div>
     </div>
   );

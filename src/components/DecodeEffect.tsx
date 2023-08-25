@@ -1,16 +1,15 @@
 "use client";
 import { Space_Mono } from "next/font/google";
-import React, { useEffect } from "react";
+import React, { HTMLAttributes, ReactNode, useEffect } from "react";
 
 const space_mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 
-interface DecodeEffectProps {
+interface DecodeEffectProps extends HTMLAttributes<HTMLSpanElement> {
   textContent: string;
-  className?: string;
 }
 const DecodeEffect: React.FC<DecodeEffectProps> = ({
   textContent,
-  className,
+  ...rest
 }) => {
   const [displayText, setDisplayText] = React.useState(textContent);
 
@@ -35,10 +34,7 @@ const DecodeEffect: React.FC<DecodeEffectProps> = ({
   }
 
   return (
-    <span
-      onMouseOver={() => randomize()}
-      className={space_mono.className + " uppercase text-2xl " + className}
-    >
+    <span onMouseOver={() => randomize()} {...rest}>
       {displayText}
     </span>
   );

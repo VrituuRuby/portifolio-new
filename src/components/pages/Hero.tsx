@@ -5,19 +5,15 @@ import { PiCaretDown } from "react-icons/pi";
 
 const rubik = Rubik({ weight: "800", subsets: ["latin"] });
 
-interface HomeProps {
-  setInViewLink?: (link: string) => void;
-}
-
-const Hero: React.FC<HomeProps> = ({ setInViewLink }) => {
+const Hero: React.FC = () => {
   return (
     <div
       id="home"
-      className={`${rubik.className} w-full h-screen snap-end text-white font-bold text-8xl flex flex-col items-center relative p-4`}
+      className={`${rubik.className} min-h-screen snap-end text-white font-bold flex flex-col items-center relative p-4`}
     >
       <div className="flex-1 flex flex-col justify-center items-center">
-        <h1>Victor Velozo</h1>
-        <h2 className="text-6xl">Web Developer</h2>
+        <h1 className="text-center text-6xl lg:text-8xl">Victor Velozo</h1>
+        <h2 className="text-center text-4xl lg:text-6xl">Web Developer</h2>
       </div>
       <motion.a
         className="cursor-pointer p-1 hover:bg-white/[.3] rounded-full"

@@ -2,6 +2,7 @@ import CursorBlob from "@/components/CursorBlob";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} scroll-smooth`}>
+      <body className={`${inter.className}`}>
         <CursorBlob />
-        <div className="backdrop-blur-[80px] -z-10 absolute left-0 top-0 w-screen h-screen" />
+        <div className="backdrop-blur-[80px] -z-10 fixed left-0 top-0 w-screen h-screen" />
         {children}
       </body>
     </html>

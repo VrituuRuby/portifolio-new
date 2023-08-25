@@ -8,11 +8,9 @@ interface ProjectProps {
 
 export const ProjectImage: React.FC<ProjectProps> = ({ path, alt }) => {
   return (
-    <Image
+    <img
       src={path}
-      className="object-cover rounded-md w-[320px]"
-      height={200}
-      width={320}
+      className="object-cover rounded-md w-full md:w-[320px]"
       alt={alt}
     />
   );

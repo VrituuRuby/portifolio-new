@@ -10,12 +10,10 @@ const rubik = Rubik({ subsets: ["latin"] });
 
 const container: Variants = {
   hidden: {
-    y: -400,
     scale: 0,
     opacity: 0,
   },
   visible: {
-    y: 0,
     scale: 1,
     opacity: 1,
   },
@@ -24,14 +22,14 @@ const container: Variants = {
 export const Contact: React.FC = () => {
   return (
     <div
-      className="w-full h-screen flex flex-col justify-center items-center snap-end overflow-x-hidden"
+      className="lg:min-h-screen snap-start flex justify-center items-center"
       id="contact"
     >
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl w-full bg-dark-blue/90 p-4 rounded-md"
+        className="flex flex-col w-full md:h-min-screen max-w-5xl bg-dark-blue/90 p-4 rounded-md"
       >
         <h3
           className={`${spaceMono.className} w-full text-white text-3xl font-bold`}

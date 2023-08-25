@@ -7,6 +7,8 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 
+import reactDexThumb from "@/../public/projects/reactdex.png";
+
 const projects = [
   {
     name: "IT.POINT",
@@ -47,15 +49,12 @@ const container: Variants = {
 
 const Projects: React.FC = () => {
   return (
-    <div
-      className="w-full h-screen flex flex-col justify-center items-center snap-end overflow-x-hidden"
-      id="projects"
-    >
+    <div className="snap-center flex justify-center items-center" id="projects">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl w-full"
+        className="flex flex-1 flex-col max-w-5xl w-full"
       >
         <h3
           className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
