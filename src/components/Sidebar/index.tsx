@@ -2,7 +2,7 @@ import { Space_Mono } from "next/font/google";
 import DecodeEffect from "../DecodeEffect";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Variants, motion } from "framer-motion";
-import { NavigationLink } from "./NavigationLink";
+import { NavigationLink } from "../NavigationLink";
 import { OutsideLink } from "./OutsideLinks";
 interface SidebarProps {
   activeLink?: string;

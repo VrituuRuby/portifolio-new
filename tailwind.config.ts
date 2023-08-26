@@ -18,7 +18,7 @@ const config: Config = {
         "blob-spin": "blobSpin 20s linear infinite",
       },
       colors: {
-        "dark-blue": "#15151E",
+        "dark-blue": "#151520",
         "button-blue": "#1D2733",
       },
       dropShadow: {

@@ -1,5 +1,5 @@
 "use client";
-import DecodeEffect from "../DecodeEffect";
+import DecodeEffect from "./DecodeEffect";
 import { Space_Mono } from "next/font/google";
 import { HTMLMotionProps, Variants, motion } from "framer-motion";
 
@@ -39,11 +39,11 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
   >
     <motion.div
       variants={bgVariants}
-      className="absolute top-0 left-0 w-full h-full bg-white mix-blend-difference  z-20 rounded-md"
+      className="absolute top-0 left-0 w-full h-full bg-white mix-blend-difference pointer-events-none  z-20 rounded-md"
     />
     <motion.div
       variants={bgVariants}
-      className="absolute top-0 left-0 w-full h-full bg-black rounded-md"
+      className="absolute top-0 left-0 w-full h-full bg-black rounded-md pointer-events-none"
     />
     <DecodeEffect
       textContent={text}
