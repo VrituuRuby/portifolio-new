@@ -25,6 +25,8 @@ const config: Config = {
         glow: "0 0 4px rgba(255,255,255,0.6)",
       },
       backgroundImage: {
+        "br-flag": "url('/br.png')",
+        "us-flag": "url('/us.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

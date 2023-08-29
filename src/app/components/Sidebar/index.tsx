@@ -7,6 +7,7 @@ import { OutsideLink } from "./OutsideLinks";
 import { useTranslation } from "react-i18next";
 import { ChangeEvent, ChangeEventHandler } from "react";
 import i18n from "@/app/i18n";
+import { LangToggle } from "../LangToggle";
 interface SidebarProps {
   activeLink?: string;
 }
@@ -60,10 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         <NavigationLink href="#contact" text={t("contact.title")} />
       </nav>
 
-      <select name="lang" onChange={onLangChange}>
-        <option value="en">en-US</option>
-        <option value="pt">pt-BR</option>
-      </select>
+      <LangToggle />
 
       <div className="flex flex-col gap-2">
         <h3

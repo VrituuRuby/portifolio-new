@@ -13,6 +13,7 @@ export default function RootLayout({
     <html>
       <head>
         <title>Victor Velozo - Fullstack WebDev</title>
+        <link rel="icon" href="/favicon.svg" />
       </head>
       <body className={`${inter.className}`}>
         <CursorBlob />
