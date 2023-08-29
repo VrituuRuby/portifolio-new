@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
+import { useTranslation } from "react-i18next";
 import {
   FaArchive,
   FaBookOpen,
@@ -33,44 +34,47 @@ const container: Variants = {
   },
 };
 
-const LinkButtons: Variants = {
+const linkVariants: Variants = {
   visible: (index: number) => ({
     y: 0,
     scale: 1,
     opacity: 1,
     transition: {
-      ease: "linear",
-      type: "tween",
-      delay: index * 0.05,
+      delay: index * 0.1,
     },
   }),
   hidden: {
     scale: 0,
-    y: 100,
     opacity: 0,
+    y: 200,
+    transition: {
+      duration: 0,
+      type: "tween",
+    },
   },
 };
 
 export const Contact: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div
-      className="lg:min-h-screen flex-col snap-start flex justify-center items-center"
       id="contact"
+      className="flex-col flex justify-center items-center lg:min-h-screen max-w-5xl w-full"
     >
-      <div className="max-w-5xl w-full flex flex-col gap-4">
+      <div className="w-full flex flex-col gap-4 pb-4">
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
-          className="flex flex-col w-full md:h-min-screen max-w-5xl bg-dark-blue/90 p-4 rounded-md"
+          className="flex flex-col w-full items-center md:h-min-screen max-w-5xl bg-dark-blue/90 p-4 rounded-md"
         >
           <h3
-            className={`${spaceMono.className} w-full text-white text-3xl font-bold`}
+            className={`${spaceMono.className} drop-shadow-glow select-none text-white text-3xl font-bold uppercase`}
           >
-            &lt;CONTACT&gt;
+            &lt;{t("contact.title")}&gt;
           </h3>
           <form
-            className="flex flex-col gap-2 flex-1"
+            className="flex w-full flex-col gap-2 flex-1"
             action="https://formsubmit.co/victor.velozo@outlook.com"
             method="POST"
           >
@@ -100,7 +104,7 @@ export const Contact: React.FC = () => {
               <textarea
                 name="message"
                 id="message"
-                placeholder="Hey Victor! What's up?"
+                placeholder={t("contact.message.placeholder")}
                 className="text-white h-32 p-2 py-1 bg-transparent border-white/40 border rounded-md resize-none focus:outline-blue-400 outline-none"
               />
             </div>
@@ -108,12 +112,12 @@ export const Contact: React.FC = () => {
               <button
                 type="submit"
                 className={
-                  "text-white flex gap-1 items-center p-2 bg-button-blue rounded-md font-bold " +
+                  "text-white flex gap-1 items-center p-2 bg-button-blue rounded-md font-bold uppercase " +
                   rubik.className
                 }
               >
                 <IoMdSend size={24} />
-                SEND
+                {t("contact.send")}
               </button>
             </div>
             <input
@@ -134,48 +138,44 @@ export const Contact: React.FC = () => {
             <input type="hidden" name="_template" value="box" />
           </form>
         </motion.div>
-        <motion.div className="flex w-full justify-around gap-4">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          className="flex w-full justify-around gap-4"
+        >
           <motion.a
-            variants={LinkButtons}
+            variants={linkVariants}
             custom={0}
-            initial="hidden"
-            whileInView="visible"
             href="https://www.linkedin.com/in/victorlv/"
             target="_blank"
-            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition"
+            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition-colors"
           >
             <FaLinkedin size={32} className="text-white" />
           </motion.a>
           <motion.a
-            variants={LinkButtons}
+            variants={linkVariants}
             custom={1}
-            initial="hidden"
-            whileInView="visible"
             href="https://github.com/VrituuRuby"
             target="_blank"
-            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition"
+            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition-colors"
           >
             <FaGithub size={32} className="text-white" />
           </motion.a>
           <motion.a
-            variants={LinkButtons}
+            variants={linkVariants}
             custom={2}
-            initial="hidden"
-            whileInView="visible"
             href="https://discordapp.com/users/300426254056947713"
             target="_blank"
-            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition"
+            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition-colors"
           >
             <FaDiscord size={32} className="text-white" />
           </motion.a>
           <motion.a
-            variants={LinkButtons}
+            variants={linkVariants}
             custom={3}
-            initial="hidden"
-            whileInView="visible"
             href="https://drive.google.com/file/d/1IIw_im3m8NTKCBk3kMxx8C4HzP8DRkQ8/view"
             target="_blank"
-            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition"
+            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition-colors"
           >
             <FaBookOpen size={32} className="text-white" />
           </motion.a>

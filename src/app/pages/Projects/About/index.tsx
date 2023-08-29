@@ -3,6 +3,7 @@
 import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
 import { TechIcon } from "./TechIcon";
+import { Trans, useTranslation } from "react-i18next";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 const rubik = Rubik({ subsets: ["latin"] });
@@ -36,21 +37,22 @@ const container: Variants = {
 };
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div
-      className="flex flex-col md:min-h-screen justify-center items-center snap-end"
       id="about"
+      className="flex flex-col justify-center items-center max-w-5xl lg:min-h-screen"
     >
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl gap-2"
+        className="flex flex-col gap-2 select-none"
       >
         <h3
-          className={`${spaceMono.className} w-full text-white text-center text-3xl font-bold drop-shadow-glow`}
+          className={`${spaceMono.className} w-full text-white text-center text-3xl font-bold  uppercase drop-shadow-glow`}
         >
-          &lt;ABOUT&gt;
+          &lt;{t("about.title")}&gt;
         </h3>
         <div className="md:flex-row md:gap-8 flex-col flex-1 flex items-center text-white">
           <motion.img
@@ -75,13 +77,7 @@ const About: React.FC = () => {
             <p
               className={`${rubik.className} text-sm md:text-base drop-shadow-glow`}
             >
-              I'm a fullstack developer who loves creating visually appealing
-              and functional designs. Currently, I'm working on personal
-              portfolio projects and exploring new technologies. <br />
-              <br />
-              My passions include technology, music, and creative pursuits. I'm
-              always eager to learn and expand my horizons. Let's connect and
-              chat about tech, creativity, or anything in between!
+              <Trans components={{ break: <br /> }}>about.description</Trans>
             </p>
           </motion.div>
         </div>
@@ -90,22 +86,18 @@ const About: React.FC = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col max-w-5xl w-full gap-2"
+        className="flex flex-col w-full gap-2"
       >
         <h3
-          className={`${spaceMono.className} w-full text-white text-center text-3xl drop-shadow-glow font-bold`}
+          className={`${spaceMono.className} w-full text-white text-center text-3xl select-none drop-shadow-glow font-bold`}
         >
           &lt;STACK&gt;
         </h3>
-        <motion.ul
-          initial="hidden"
-          whileInView="visible"
-          className="flex flex-row flex-wrap gap-1 justify-center list-none"
-        >
+        <ul className="flex flex-row flex-wrap gap-1 justify-center list-none">
           {stackIcons.map(({ iconPath, name }, index) => (
             <TechIcon key={name} icon={iconPath} name={name} index={index} />
           ))}
-        </motion.ul>
+        </ul>
       </motion.div>
     </div>
   );

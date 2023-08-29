@@ -1,9 +1,12 @@
+"use client";
 import { Space_Mono } from "next/font/google";
-import DecodeEffect from "../DecodeEffect";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Variants, motion } from "framer-motion";
 import { NavigationLink } from "../NavigationLink";
 import { OutsideLink } from "./OutsideLinks";
+import { useTranslation } from "react-i18next";
+import { ChangeEvent, ChangeEventHandler } from "react";
+import i18n from "@/app/i18n";
 interface SidebarProps {
   activeLink?: string;
 }
@@ -26,6 +29,12 @@ const container: Variants = {
 };
 
 const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
+  const { t } = useTranslation();
+
+  function onLangChange(event: ChangeEvent<HTMLSelectElement>) {
+    i18n.changeLanguage(event.target.value);
+  }
+
   return (
     <motion.div
       variants={container}
@@ -46,10 +55,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         </h3>
 
         <NavigationLink href="#home" text="home" />
-        <NavigationLink href="#about" text="about" />
-        <NavigationLink href="#projects" text="projects" />
-        <NavigationLink href="#contact" text="contact" />
+        <NavigationLink href="#about" text={t("about.title")} />
+        <NavigationLink href="#projects" text={t("projects.title")} />
+        <NavigationLink href="#contact" text={t("contact.title")} />
       </nav>
+
+      <select name="lang" onChange={onLangChange}>
+        <option value="en">en-US</option>
+        <option value="pt">pt-BR</option>
+      </select>
 
       <div className="flex flex-col gap-2">
         <h3

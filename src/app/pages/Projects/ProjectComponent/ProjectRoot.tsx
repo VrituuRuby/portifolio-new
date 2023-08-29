@@ -40,7 +40,6 @@ export const ProjectRoot: React.FC<ProjectRootProps> = ({
       variants={projectVariants}
       initial="hidden"
       whileInView="visible"
-      whileHover="hover"
       custom={index}
       className="group flex flex-col items-center text-white lg:flex-row"
     >

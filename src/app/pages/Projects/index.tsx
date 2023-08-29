@@ -2,40 +2,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Variants, motion } from "framer-motion";
 import { Space_Mono } from "next/font/google";
-import { Project } from "./Project";
 import { FaGithub, FaPlay } from "react-icons/fa";
+import { Project } from "./ProjectComponent";
+import { useTranslation } from "react-i18next";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
-
-import reactDexThumb from "@/../public/projects/reactdex.png";
-
-const projects = [
-  {
-    name: "IT.POINT",
-    title: "FullStack Project",
-    description:
-      "Thit is It.point: Your go-to ITSM (IT Service Manager) system. Easily create categorized tickets for efficient problem-solving. Customize categories, add notes to stay informed on ticket progress.",
-    stack: ["ReactJS", "NextJS", "Tailwind CSS", "NodeJs", "Express"],
-    gitrepo: "https://github.com/VrituuRuby/it.point-web",
-    image: "/projects/itpoint.png",
-  },
-  {
-    name: "ReactDex",
-    title: "Front end project",
-    description:
-      "Explore a charming Pokédex app that lets you browse through all the Pokémon generations using the GraphQL API from PokéAPI. Look up your favorite Pokémon, check out its in-game entry, and follow its evolutions and weaknesses with ease.",
-    stack: [
-      "ReactJS",
-      "StyledComponents",
-      "GraphQL",
-      "PokéAPI",
-      "ApolloClient",
-    ],
-    gitrepo: "https://github.com/VrituuRuby/react-pokedex",
-    livedemo: "https://reactdex.onrender.com",
-    image: "/projects/reactdex.png",
-  },
-];
 
 const container: Variants = {
   hidden: {
@@ -48,18 +19,48 @@ const container: Variants = {
 };
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      name: "IT.POINT",
+      title: "FullStack Project",
+      description: t("projects.itpoint.description"),
+      stack: ["ReactJS", "NextJS", "Tailwind CSS", "NodeJs", "Express"],
+      gitrepo: "https://github.com/VrituuRuby/it.point-web",
+      image: "/projects/itpoint.png",
+    },
+    {
+      name: "ReactDex",
+      title: "Front end project",
+      description: t("projects.reactdex.description"),
+      stack: [
+        "ReactJS",
+        "StyledComponents",
+        "GraphQL",
+        "PokéAPI",
+        "ApolloClient",
+      ],
+      gitrepo: "https://github.com/VrituuRuby/react-pokedex",
+      livedemo: "https://reactdex.onrender.com",
+      image: "/projects/reactdex.png",
+    },
+  ];
   return (
-    <div className="snap-center flex justify-center items-center" id="projects">
+    <div
+      id="projects"
+      className="flex justify-center items-center max-w-5xl lg:min-h-screen"
+    >
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-1 flex-col max-w-5xl w-full"
+        className="flex flex-col items-center justify-center w-full"
       >
         <h3
-          className={`${spaceMono.className} w-full text-white text-3xl font-bold py-4`}
+          className={`${spaceMono.className} select-none drop-shadow-glow text-white text-3xl font-bold py-4 uppercase`}
         >
-          &lt;PROJECTS&gt;
+          &lt;{t("projects.title")}&gt;
         </h3>
         <div className="flex flex-col gap-4">
           {projects.map(
@@ -77,14 +78,14 @@ const Projects: React.FC = () => {
                   <Project.Link
                     icon={FaGithub}
                     href={gitrepo}
-                    text="Github Repository"
+                    text={t("projects.githubrepo")}
                   />
 
                   {livedemo && (
                     <Project.Link
                       icon={FaPlay}
                       href={livedemo}
-                      text="Live Demo"
+                      text={t("projects.livedemo")}
                     />
                   )}
                 </Project.Content>

@@ -8,7 +8,5 @@ html {
 
 body {
   background-image: url("/background-gradient.svg");
-  background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
 }
