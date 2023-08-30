@@ -1,8 +1,8 @@
 "use client";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, LabelHTMLAttributes, useEffect, useState } from "react";
 import i18n from "../i18n";
 import { Variants, motion } from "framer-motion";
-
+import { twMerge } from "tailwind-merge";
 const sliderVariant: Variants = {
   left: {
     y: 2,
@@ -10,7 +10,7 @@ const sliderVariant: Variants = {
   },
   right: {
     y: 2,
-    x: 30,
+    x: 38,
   },
   flagVisible: {
     opacity: 1,
@@ -20,7 +20,9 @@ const sliderVariant: Variants = {
   },
 };
 
-export const LangToggle: React.FC = () => {
+interface LangToggleProps extends LabelHTMLAttributes<HTMLLabelElement> {}
+
+export const LangToggle: React.FC<LangToggleProps> = ({ ...rest }) => {
   const [isEnglish, setIsEnglish] = useState(true);
 
   useEffect(() => {
@@ -32,17 +34,22 @@ export const LangToggle: React.FC = () => {
   }
 
   return (
-    <label className="flex gap-4 w-16 h-9 bg-white/40 rounded-full relative text-white cursor-pointer">
+    <label
+      className={twMerge(
+        "flex gap-4 focus:outline-2 focus:outline-blue-400 outline-2 w-[72px] h-9 bg-white/40 hover:bg-white/60  transition-colors rounded-full relative text-white cursor-pointer select-none",
+        rest.className
+      )}
+    >
       <input
         className="hidden"
         type="checkbox"
         checked={isEnglish}
         onChange={toggleEnglish}
       />
-      <span className="font-bold absolute left-2 top-1/2 -translate-y-1/2">
+      <span className="font-bold absolute text-lg left-2 top-1/2 -translate-y-1/2">
         EN
       </span>
-      <span className="font-bold absolute right-2 top-1/2 -translate-y-1/2">
+      <span className="font-bold absolute text-lg right-2 top-1/2 -translate-y-1/2">
         PT
       </span>
 

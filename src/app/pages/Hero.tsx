@@ -25,14 +25,14 @@ const Hero: React.FC = () => {
             {t("home.contact")}
           </a>
           <a
-            href="https://drive.google.com/file/d/1IIw_im3m8NTKCBk3kMxx8C4HzP8DRkQ8/view"
+            href={t("home.resume.url")}
             target="_blank"
             className="px-2 py-1 hover:bg-white/60 bg-white/20 transition rounded-md uppercase"
           >
             {t("home.resume")}
           </a>
         </div>
-        <LangToggle />
+        <LangToggle className="flex sm:hidden" />
       </div>
       <motion.a
         className="cursor-pointer p-1 hover:bg-white/[.3] rounded-full absolute top-[80%] text-white"

@@ -170,15 +170,6 @@ export const Contact: React.FC = () => {
           >
             <FaDiscord size={32} className="text-white" />
           </motion.a>
-          <motion.a
-            variants={linkVariants}
-            custom={3}
-            href="https://drive.google.com/file/d/1IIw_im3m8NTKCBk3kMxx8C4HzP8DRkQ8/view"
-            target="_blank"
-            className="bg-dark-blue/90 shadow-lg hover:brightness-150 p-4 flex-1 rounded-md flex items-center justify-center transition-colors"
-          >
-            <FaBookOpen size={32} className="text-white" />
-          </motion.a>
         </motion.div>
       </div>
     </div>

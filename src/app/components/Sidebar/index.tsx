@@ -41,8 +41,21 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="p-4 bg-black/80 sm:flex text-white hidden flex-col justify-between overflow-hidden"
+      className="p-4 bg-black/80 sm:flex text-white hidden flex-col gap-2 overflow-hidden"
     >
+      <div className="flex flex-col gap-2">
+        <h3
+          className={
+            spaceMono.className + " text-[#0598CE] flex items-center gap-2"
+          }
+        >
+          <span className="bg-[#0598CE] relative rounded-full flex w-2 h-2">
+            <span className="animate-ping absolute rounded-full w-full h-full bg-[#0598CE]"></span>
+          </span>
+          LANGUAGE
+        </h3>
+        <LangToggle />
+      </div>
       <nav className="flex-col flex items-start gap-2">
         <h3
           className={
@@ -61,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         <NavigationLink href="#contact" text={t("contact.title")} />
       </nav>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-1 flex-col justify-end gap-2">
         <h3
           className={
             spaceMono.className + " text-[#0598CE] flex items-center gap-2"
