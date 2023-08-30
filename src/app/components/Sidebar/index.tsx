@@ -61,8 +61,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         <NavigationLink href="#contact" text={t("contact.title")} />
       </nav>
 
-      <LangToggle />
-
       <div className="flex flex-col gap-2">
         <h3
           className={

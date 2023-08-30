@@ -4,6 +4,7 @@ import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
 import { TechIcon } from "./TechIcon";
 import { Trans, useTranslation } from "react-i18next";
+import { LangToggle } from "@/app/components/LangToggle";
 
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 const rubik = Rubik({ subsets: ["latin"] });
@@ -47,7 +48,7 @@ const About: React.FC = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col gap-2 select-none"
+        className="flex flex-col items-center gap-2 select-none"
       >
         <h3
           className={`${spaceMono.className} w-full text-white text-center text-3xl font-bold  uppercase drop-shadow-glow`}

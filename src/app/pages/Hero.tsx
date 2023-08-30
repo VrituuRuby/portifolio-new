@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Rubik } from "next/font/google";
 import { useTranslation } from "react-i18next";
 import { PiCaretDown } from "react-icons/pi";
+import { LangToggle } from "../components/LangToggle";
 
 const rubik = Rubik({ weight: "800", subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ const Hero: React.FC = () => {
             {t("home.resume")}
           </a>
         </div>
+        <LangToggle />
       </div>
       <motion.a
         className="cursor-pointer p-1 hover:bg-white/[.3] rounded-full absolute top-[80%] text-white"
