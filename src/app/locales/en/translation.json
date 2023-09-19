@@ -9,6 +9,7 @@
   "projects.livedemo": "Live Demo",
   "projects.itpoint.description": "Thit is It.point: Your go-to ITSM (IT Service Manager) system. Easily create categorized tickets for efficient problem-solving. Customize categories, add notes to stay informed on ticket progress.",
   "projects.reactdex.description": "Explore a charming Pokédex app that lets you browse through all the Pokémon generations using the GraphQL API from PokéAPI. Look up your favorite Pokémon, check out its in-game entry, and follow its evolutions and weaknesses with ease.",
+  "projects.coffee-delivery.description": "Introducing Coffee Delivery, an online coffee delivery shopping system. This responsive website features a seamless shopping experience with a user-friendly shopping cart system, allowing you effortlessly to add, remove and increase your favorite coffee items.",
   "contact.title": "contact",
   "contact.message.placeholder": "Hey Victor! What's up?",
   "contact.send": "send"

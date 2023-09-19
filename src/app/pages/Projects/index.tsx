@@ -45,6 +45,14 @@ const Projects: React.FC = () => {
       livedemo: "https://reactdex.onrender.com",
       image: "/projects/reactdex.png",
     },
+    {
+      name: "Coffee Delivery",
+      description: t("projects.coffee-delivery.description"),
+      stack: ["ReactJS", "StyledComponents", "Vite"],
+      gitrepo: "https://github.com/VrituuRuby/coffee-delivery-app",
+      livedemo: "https://coffeedelivery.onrender.com",
+      image: "/projects/coffee-delivery.png",
+    }
   ];
   return (
     <div
@@ -62,7 +70,7 @@ const Projects: React.FC = () => {
         >
           &lt;{t("projects.title")}&gt;
         </h3>
-        <div className="flex flex-col gap-4">
+        <motion.div className="flex flex-col gap-4" initial="hidden" whileInView="visible">
           {projects.map(
             (
               { name, description, gitrepo, image, stack, title, livedemo },
@@ -92,7 +100,7 @@ const Projects: React.FC = () => {
               </Project.Root>
             )
           )}
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

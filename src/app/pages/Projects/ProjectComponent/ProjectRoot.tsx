@@ -38,8 +38,6 @@ export const ProjectRoot: React.FC<ProjectRootProps> = ({
   return (
     <motion.article
       variants={projectVariants}
-      initial="hidden"
-      whileInView="visible"
       custom={index}
       className="group flex flex-col items-center text-white lg:flex-row"
     >

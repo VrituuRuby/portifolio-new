@@ -9,6 +9,7 @@
   "projects.livedemo": "Demonstração ao Vivo",
   "projects.itpoint.description": "Conheça IT.POINT: Um sistema gerenciamento de serviços de TI (ITSM). Crie tickets categorizados, customize categorias, adicione notas, mantenha informado todos os envolvidos no processo e facilite e acelere a resolução de problemas de seus usuários.",
   "projects.reactdex.description": "Explore uma Pokédex estiloza que te permite buscar pokémon de todas as gerações existentes utilizando a API de GraphQL da PokéAPI. Descubra seus pokémon favoritos e seus registros originais e acompanhe suas fraquezas e evoluções.",
+  "projects.coffee-delivery.description": "Coffee Delivery é um sistema de compra online de entrega de café, um site responsivo com um sistema de carrinho de compras no qual você pode adicionar, remover e aumentar a quantidade de itens.",
   "contact.title": "contato",
   "contact.message.placeholder": "Olá Victor! Como está?",
   "contact.send": "enviar"
