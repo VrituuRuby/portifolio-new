@@ -6,7 +6,7 @@ import { NavigationLink } from "../NavigationLink";
 import { OutsideLink } from "./OutsideLinks";
 import { useTranslation } from "react-i18next";
 import { ChangeEvent, ChangeEventHandler } from "react";
-import i18n from "@/app/i18n";
+import i18n from "@/app/utils/i18n";
 import { LangToggle } from "../LangToggle";
 interface SidebarProps {
   activeLink?: string;

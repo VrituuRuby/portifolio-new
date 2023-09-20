@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "home.contact": "get in touch",
+    "home.resume": "my resume/cv",
+    "home.resume.url": "https://drive.google.com/file/d/141v_yzs2TauP2FN0GN3Spcx961NH79LO/view?usp=sharing",
+    "about.title": "about",
+    "about.description": "I'm a fullstack developer who loves creating visually appealing and functional designs. Currently, I'm working on personal portfolio projects and exploring new technologies. My passions include technology, music, and creative pursuits.<br/><br/>I'm always eager to learn and expand my horizons. Let's connect and chat about tech, creativity, or anything in between!",
+    "projects.title": "projects",
+    "projects.githubrepo": "Github Repository",
+    "projects.livedemo": "Live Demo",
+    "projects.itpoint.description": "Thit is It.point: Your go-to ITSM (IT Service Manager) system. Easily create categorized tickets for efficient problem-solving. Customize categories, add notes to stay informed on ticket progress.",
+    "projects.reactdex.description": "Explore a charming Pokédex app that lets you browse through all the Pokémon generations using the GraphQL API from PokéAPI. Look up your favorite Pokémon, check out its in-game entry, and follow its evolutions and weaknesses with ease.",
+    "projects.coffee-delivery.description": "Introducing Coffee Delivery, an online coffee delivery shopping system. This responsive website features a seamless shopping experience with a user-friendly shopping cart system, allowing you effortlessly to add, remove and increase your favorite coffee items.",
+    "contact.title": "contact",
+    "contact.message.placeholder": "Hey Victor! What's up?",
+    "contact.send": "send"
+  }
+}

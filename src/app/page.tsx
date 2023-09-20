@@ -1,6 +1,6 @@
 "use client";
 import Sidebar from "@/app/components/Sidebar";
-import "./i18n";
+import "./utils/i18n";
 import Hero from "@/app/pages/Hero";
 import About from "./pages/About";
 import Projects from "@/app/pages/Projects";

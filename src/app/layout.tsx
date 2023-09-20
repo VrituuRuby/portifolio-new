@@ -10,7 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="pt">
       <head>
         <title>Victor Velozo - Fullstack WebDev</title>
         <link rel="icon" href="/favicon.svg" />

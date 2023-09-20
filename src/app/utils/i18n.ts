@@ -6,16 +6,20 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import translationsEn from "./locales/en/translation.json";
 import translationsPt from "./locales/pt/translation.json";
 
+
 i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
+.use(initReactI18next)
+.use(LanguageDetector)
+.init({
+    lng: "pt-BR",
     resources: {
-      en: { translation: translationsEn },
-      pt: { translation: translationsPt },
+      "en-US": translationsEn,
+      "pt-BR": translationsPt,
     },
-    lng: "en",
-    fallbackLng: "en",
+    detection: {
+      order: ["queryString", "cookies"],
+      caches: ["cookie"]
+    }
   });
 
 export default i18n;

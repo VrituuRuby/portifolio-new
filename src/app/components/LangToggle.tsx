@@ -1,8 +1,10 @@
 "use client";
-import { ChangeEvent, LabelHTMLAttributes, useEffect, useState } from "react";
-import i18n from "../i18n";
-import { Variants, motion } from "framer-motion";
+import {LabelHTMLAttributes, useState } from "react";
+import i18n from "../utils/i18n";
+import { Variants, motion } from 'framer-motion'
 import { twMerge } from "tailwind-merge";
+
+
 const sliderVariant: Variants = {
   left: {
     y: 2,
@@ -22,17 +24,15 @@ const sliderVariant: Variants = {
 
 interface LangToggleProps extends LabelHTMLAttributes<HTMLLabelElement> {}
 
+type lang = "pt-BR" | "en-US" | null 
+
 export const LangToggle: React.FC<LangToggleProps> = ({ ...rest }) => {
-  const [isEnglish, setIsEnglish] = useState(true);
+  const [langDisplay, setLangDisplay] = useState<lang>(i18n.language as lang);
 
-  useEffect(() => {
-    i18n.changeLanguage(isEnglish ? "en" : "pt");
-  }, [isEnglish]);
-
-  function toggleEnglish() {
-    setIsEnglish(!isEnglish);
+  function toggleLanguage(){
+    setLangDisplay(lang => lang === "en-US" ? "pt-BR" : "en-US")
+    i18n.changeLanguage(langDisplay === "en-US" ? "pt-BR" : "en-US")
   }
-
   return (
     <label
       className={twMerge(
@@ -43,8 +43,8 @@ export const LangToggle: React.FC<LangToggleProps> = ({ ...rest }) => {
       <input
         className="hidden"
         type="checkbox"
-        checked={isEnglish}
-        onChange={toggleEnglish}
+        checked={langDisplay === "en-US"}
+        onChange={toggleLanguage}
       />
       <span className="font-bold absolute text-lg left-2 top-1/2 -translate-y-1/2">
         EN
@@ -55,7 +55,7 @@ export const LangToggle: React.FC<LangToggleProps> = ({ ...rest }) => {
 
       <motion.span
         variants={sliderVariant}
-        animate={isEnglish ? "right" : "left"}
+        animate={langDisplay === "en-US" ? "right" : "left"}
         initial="left"
         transition={{ duration: 0.2, ease: "easeInOut" }}
         className="w-8 h-8 translate-x-1 left-0 bg-cover bg-center border-2 border-white rounded-full overflow-hidden relative"
@@ -63,13 +63,13 @@ export const LangToggle: React.FC<LangToggleProps> = ({ ...rest }) => {
         <motion.span
           className="bg-br-flag absolute top-0 left-0 w-full h-full bg-center bg-cover"
           initial="flagHidden"
-          animate={isEnglish ? "flagHidden" : "flagVisible"}
+            animate={langDisplay === "en-US" ? "flagHidden" : "flagVisible"}
           variants={sliderVariant}
         />
         <motion.span
           className="bg-us-flag absolute top-0 left-0 w-full h-full bg-center bg-cover"
           initial="flagHidden"
-          animate={isEnglish ? "flagVisible" : "flagHidden"}
+          animate={langDisplay === "en-US" ? "flagVisible" : "flagHidden"}
           variants={sliderVariant}
         />
       </motion.span>
