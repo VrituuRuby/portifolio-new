@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 import { Variants, motion } from "framer-motion";
 import { Rubik, Space_Mono } from "next/font/google";
 import { TechIcon } from "./TechIcon";
@@ -86,11 +85,11 @@ const About: React.FC = () => {
         whileInView="visible"
         className="flex flex-col w-full gap-2"
       >
-        <h3
+        {/* <h3
           className={`${spaceMono.className} w-full text-white text-center text-3xl select-none drop-shadow-glow font-bold`}
         >
           &lt;STACK&gt;
-        </h3>
+        </h3> */}
         <ul className="flex flex-row flex-wrap gap-1 justify-center list-none">
           {stackIcons.map(({ iconPath, name }, index) => (
             <TechIcon key={name} icon={iconPath} name={name} index={index} />

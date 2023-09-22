@@ -1,8 +1,6 @@
 "use client";
-import { Space_Mono } from "next/font/google";
 import React, { HTMLAttributes, ReactNode, useEffect } from "react";
 
-const space_mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 
 interface DecodeEffectProps extends HTMLAttributes<HTMLSpanElement> {
   textContent: string;
@@ -14,6 +12,10 @@ const DecodeEffect: React.FC<DecodeEffectProps> = ({
   const [displayText, setDisplayText] = React.useState(textContent);
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  useEffect(() => {
+    setDisplayText(textContent)
+  }, [textContent])
 
   function randomize() {
     let iterations = 0;

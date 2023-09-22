@@ -30,27 +30,30 @@ const bgVariants: Variants = {
 export const NavigationLink: React.FC<NavigationLinkProps> = ({
   text,
   ...rest
-}) => (
-  <motion.a
-    {...rest}
-    className="flex items-center p-1 relative rounded-sm"
-    initial="hidden"
-    whileHover="visible"
-  >
-    <motion.div
-      variants={bgVariants}
-      className="absolute top-0 left-0 w-full h-full bg-white mix-blend-difference pointer-events-none  z-20 rounded-md"
-    />
-    <motion.div
-      variants={bgVariants}
-      className="absolute top-0 left-0 w-full h-full bg-black rounded-md pointer-events-none"
-    />
-    <DecodeEffect
-      textContent={text}
-      className={
-        "text-white font-bold text-3xl leading-[80%] uppercase z-10 " +
-        spaceMono.className
-      }
-    ></DecodeEffect>
-  </motion.a>
-);
+}) => {
+
+  return (
+    <motion.a
+      {...rest}
+      className="flex items-center p-1 relative rounded-sm"
+      initial="hidden"
+      whileHover="visible"
+    >
+      <motion.div
+        variants={bgVariants}
+        className="absolute top-0 left-0 w-full h-full bg-white mix-blend-difference pointer-events-none  z-20 rounded-md"
+      />
+      <motion.div
+        variants={bgVariants}
+        className="absolute top-0 left-0 w-full h-full bg-black rounded-md pointer-events-none"
+      />
+      <DecodeEffect
+        textContent={text}
+        className={
+          "text-white font-bold text-3xl leading-[80%] uppercase z-10 " +
+          spaceMono.className
+        }
+      ></DecodeEffect>
+    </motion.a>
+  );
+}
