@@ -1,7 +1,6 @@
 'use client'
 import { JetBrains_Mono } from 'next/font/google'
 import { useTranslation } from 'react-i18next'
-import { IoMdSend } from 'react-icons/io'
 
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] })
 
