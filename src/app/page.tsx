@@ -10,7 +10,7 @@ const Main: React.FC = () => {
   return (
     <div className="flex flex-col px-4">
       <NavBar />
-      <main className="flex-1 flex flex-col gap-4 justify-between items-center overflow-y-scroll h-screen scroll-smooth px-4 overflow-x-clip">
+      <main className="flex-1 flex flex-col justify-between items-center px-4">
         <Hero />
         <About />
         <Projects />

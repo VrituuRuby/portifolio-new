@@ -20,7 +20,7 @@ const CursorBlob: React.FC = () => {
   }, [])
   return (
     <div
-      className="-z-50 h-[800px] opacity-60 aspect-square hidden md:block fixed justify-center left-1/2 top-1/2 items-center rounded-full -translate-x-1/2 -translate-y-1/2"
+      className="-z-50 h-[800px] aspect-square hidden md:block fixed justify-center left-1/2 top-1/2 items-center rounded-full -translate-x-1/2 -translate-y-1/2"
       ref={cursorRef}
     >
       <svg
@@ -30,9 +30,9 @@ const CursorBlob: React.FC = () => {
       >
         <defs>
           <linearGradient id="0" x1="0.15" y1="0.85" x2="0.85" y2="0.15">
-            <stop offset="0%" stopColor="#ff0055" />
-            <stop offset="33.33%" stopColor="#ec1bda" />
-            <stop offset="100%" stopColor="#00aeff" />
+            <stop offset="0%" stopColor="#FF1D53" />
+            <stop offset="50%" stopColor="#ec1bda" />
+            <stop offset="100%" stopColor="#58E1FF" />
           </linearGradient>
         </defs>
         <path fill="url(#0)" transform="translate(100 100)">

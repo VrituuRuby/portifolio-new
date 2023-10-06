@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
         </h3>
       </div>
       <form
-        className="flex w-full flex-col gap-4 border-2 border-neon-red p-4 bg-dark-bg/50"
+        className="flex w-full flex-col gap-4 border-2 border-neon-red p-4 bg-dark-bg/50 clip-path-bottom-rigth"
         action="https://formsubmit.co/victor.velozo@outlook.com"
         method="POST"
       >

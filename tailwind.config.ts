@@ -21,8 +21,6 @@ const config: Config = {
         'dark-bg': '#0F0514',
         'neon-red': '#FF1D53',
         'neon-blue': '#58E1FF',
-        'dark-blue': '#151520',
-        'button-blue': '#1D2733',
       },
       dropShadow: {
         glow: '0 0 4px rgba(255,255,255,0.6)',

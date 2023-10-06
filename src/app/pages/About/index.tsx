@@ -34,7 +34,7 @@ const About: React.FC = () => {
       <div className="flex gap-8">
         <img
           src="/avatar.png"
-          alt=""
+          alt="pixel art avatar"
           className="h-[235px] rounded-full border-[6px] border-neon-red shadow-neon-red"
         />
         <div className="uppercase flex flex-col justify-between gap-2 text-white">
