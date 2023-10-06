@@ -14,7 +14,7 @@ const projectVariants: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: index * 0.2,
+      delay: 0.2,
     },
   }),
   hover: {
@@ -39,6 +39,8 @@ export const ProjectRoot: React.FC<ProjectRootProps> = ({
     <motion.article
       variants={projectVariants}
       custom={index}
+      initial="hidden"
+      whileInView="visible"
       className="group flex flex-col items-center text-white lg:flex-row gap-4"
     >
       {children}

@@ -1,7 +1,8 @@
 'use client'
-import { JetBrains_Mono, Rubik, Space_Mono } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import { TechIcon } from './TechIcon'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 const stackIcons = [
   { name: 'HTML 5', iconPath: '/icons/html.svg' },
@@ -51,7 +52,7 @@ const About: React.FC = () => {
       </div>
       <div className="flex flex-col items-center gap-2 w-full">
         <h3 className="drop-shadow-neon-blue text-neon-blue text-2xl">STACK</h3>
-        <ul className="flex w-full justify-between">
+        <motion.ul whileInView="visible" initial="hidden" className="flex w-full justify-between">
           {stackIcons.map((icon, index) => (
             <TechIcon
               icon={icon.iconPath}
@@ -60,7 +61,7 @@ const About: React.FC = () => {
               index={index}
             />
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </div>
   )

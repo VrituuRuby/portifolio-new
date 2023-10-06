@@ -1,16 +1,31 @@
 'use client'
+import { Variants, motion } from 'framer-motion'
 import { JetBrains_Mono } from 'next/font/google'
 import { useTranslation } from 'react-i18next'
 
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] })
 
+const formVariants: Variants = {
+  visible: {
+    scale: 1,
+    opacity: 1,
+  },
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  }
+}
+
 export const Contact: React.FC = () => {
   const { t } = useTranslation()
   return (
-    <div
+    <motion.div
       id="contact"
+      variants={formVariants}
+      initial="hidden"
+      whileInView="visible"
       className={`${jetbrains.className} flex-col flex justify-center items-center lg:min-h-screen max-w-5xl w-full`}
-    >
+      >
       <div
         className="
           flex w-full bg-neon-red
@@ -84,6 +99,6 @@ export const Contact: React.FC = () => {
         ></input>
         <input type="hidden" name="_template" value="box" />
       </form>
-    </div>
+    </motion.div>
   )
 }

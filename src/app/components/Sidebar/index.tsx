@@ -29,6 +29,7 @@ const container: Variants = {
   },
 };
 
+/** @deprecated  Switched to NavBar */
 const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
   const { t } = useTranslation();
 

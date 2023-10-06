@@ -15,9 +15,10 @@ export default function RootLayout({
         <title>Victor Velozo - Fullstack WebDev</title>
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} before:backdrop-blur-[200px] 
+        before:-z-10 before:left-0 before:top-0 before:fixed before:w-screen before:h-screen
+      `}>
         <CursorBlob />
-        <div className="backdrop-blur-[200px] hidden sm:block -z-10 fixed left-0 top-0 w-screen h-screen" />
         {children}
       </body>
     </html>

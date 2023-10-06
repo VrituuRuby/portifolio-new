@@ -6,22 +6,29 @@ import { PiCaretDown } from 'react-icons/pi'
 const rubik = Rubik({ weight: '800', subsets: ['latin'] })
 const jetbrains = JetBrains_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 
-const Hero: React.FC = () => {
+const Hero: React.FC = () => { 
+  function breakWordIntoLetters(text: string){
+    const letters = text.split("")
+    return letters.map((letter, index) => <span 
+    className="text-center"
+    key={index}>{letter}</span>)
+  }
+
   return (
     <div
       id="home"
       className={`${rubik.className} w-full min-h-screen snap-start flex flex-col items-center justify-center`}
     >
-      <div className="text-left">
+      <div className={`${jetbrains.className} text-white flex flex-col w-full max-w-5xl uppercase text-whte`}>
         <h1
-          className={`${jetbrains.className} uppercase text-white text-8xl text-left font-bold tracking-[.16em]`}
+      className='text-8xl font-bold w-full flex flex-row flex-nowrap justify-between text-center'
         >
-          VICTOR VELOZO
+          {breakWordIntoLetters('VICTOR  VELOZO')}
         </h1>
         <h2
-          className={`${jetbrains.className} uppercase text-white text-[64px] text-left tracking-[.56em]`}
+      className='text-[64px] font-bold w-full flex flex-row flex-nowrap justify-between text-cente'
         >
-          WEB DEVELOPER
+          {breakWordIntoLetters('WEB  DEVELOPER')}
         </h2>
       </div>
 

@@ -9,16 +9,6 @@ import { useTranslation } from 'react-i18next'
 const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'] })
 const jetbrains = JetBrains_Mono({ weight: ['400'], subsets: ['latin'] })
 
-const container: Variants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-  },
-}
-
 const Projects: React.FC = () => {
   const { t } = useTranslation()
 
@@ -60,10 +50,7 @@ const Projects: React.FC = () => {
       id="projects"
       className="flex justify-center items-center max-w-5xl lg:min-h-screen"
     >
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
+      <div
         className="flex flex-col w-full gap-4"
       >
         <h3
@@ -71,11 +58,7 @@ const Projects: React.FC = () => {
         >
           {t('projects.title')}
         </h3>
-        <motion.div
-          className="flex flex-col gap-4"
-          initial="hidden"
-          whileInView="visible"
-        >
+        <div className="flex flex-col gap-4">
           {projects.map(
             ({ name, description, gitrepo, image, stack, livedemo }, index) => (
               <Project.Root key={index} index={index}>
@@ -102,8 +85,8 @@ const Projects: React.FC = () => {
               </Project.Root>
             ),
           )}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   )
 }

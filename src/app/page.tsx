@@ -10,7 +10,7 @@ const Main: React.FC = () => {
   return (
     <div className="flex flex-col px-4">
       <NavBar />
-      <main className="flex-1 flex flex-col justify-between items-center px-4">
+      <main className="flex-1 flex flex-col justify-between items-center">
         <Hero />
         <About />
         <Projects />
