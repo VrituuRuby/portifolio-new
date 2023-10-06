@@ -7,8 +7,7 @@ html {
 }
 
 body {
-  background-image: url("/background-gradient.svg");
-  background-repeat: no-repeat;
+  background-color: #0F0514;
 }
 
 ::-webkit-scrollbar{
@@ -22,4 +21,12 @@ body {
 ::-webkit-scrollbar-thumb{
   border-radius: 999px;
   background-color: rgba(0,0,0,0.8);
+}
+
+.clip-path{
+  clip-path: polygon(16px 0,100% 0,100% 30px,calc(100% - 18px) 48px,calc(100% - 18px) 2000%,0 2000%,0 16px);
+}
+
+.clip-path-right{
+  clip-path: polygon(16px 0,100% 0,100% 100%,100% 100%,100% 2000%,0 2000%,0 16px);
 }

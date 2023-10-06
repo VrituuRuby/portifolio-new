@@ -1,14 +1,14 @@
-import React, { ReactNode } from "react";
-import { Variants, motion } from "framer-motion";
+import React, { ReactNode } from 'react'
+import { Variants, motion } from 'framer-motion'
 
 function ifEven(number: number, ifTrue: string, ifFalse: string): string {
-  return number % 2 === 0 ? ifTrue : ifFalse;
+  return number % 2 === 0 ? ifTrue : ifFalse
 }
 
 const projectVariants: Variants = {
   hidden: (index: number) => ({
     opacity: 0,
-    x: ifEven(index, "-200px", "200px"),
+    x: ifEven(index, '-200px', '200px'),
   }),
   visible: (index: number) => ({
     opacity: 1,
@@ -20,15 +20,15 @@ const projectVariants: Variants = {
   hover: {
     scale: 1.02,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.2,
     },
   },
-};
+}
 
 interface ProjectRootProps {
-  index: number;
-  children: ReactNode;
+  index: number
+  children: ReactNode
 }
 
 export const ProjectRoot: React.FC<ProjectRootProps> = ({
@@ -39,9 +39,9 @@ export const ProjectRoot: React.FC<ProjectRootProps> = ({
     <motion.article
       variants={projectVariants}
       custom={index}
-      className="group flex flex-col items-center text-white lg:flex-row"
+      className="group flex flex-col items-center text-white lg:flex-row gap-4"
     >
       {children}
     </motion.article>
-  );
-};
+  )
+}

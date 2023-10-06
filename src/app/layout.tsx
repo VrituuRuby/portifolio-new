@@ -1,13 +1,13 @@
-import CursorBlob from "@/app/components/CursorBlob";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import CursorBlob from '@/app/components/CursorBlob'
+import './globals.css'
+import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="pt">
@@ -17,9 +17,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className}`}>
         <CursorBlob />
-        <div className="backdrop-blur-[80px] hidden sm:block -z-10 fixed left-0 top-0 w-screen h-screen" />
+        <div className="backdrop-blur-[200px] hidden sm:block -z-10 fixed left-0 top-0 w-screen h-screen" />
         {children}
       </body>
     </html>
-  );
+  )
 }

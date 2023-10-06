@@ -1,9 +1,12 @@
-import { AnchorHTMLAttributes, ElementType } from "react";
+import { JetBrains_Mono } from 'next/font/google'
+import { AnchorHTMLAttributes, ElementType } from 'react'
 
 interface ProjectLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  icon: ElementType;
-  text: string;
+  icon: ElementType
+  text: string
 }
+
+const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] })
 
 export const ProjectLink: React.FC<ProjectLinkProps> = ({
   icon: Icon,
@@ -14,10 +17,10 @@ export const ProjectLink: React.FC<ProjectLinkProps> = ({
     <a
       {...rest}
       target="_blank"
-      className="p-2 bg-dark-blue/90 rounded-md text-center flex gap-2 items-center hover:bg-slate-800 transition-colors"
+      className={`p-1 rounded-md flex gap-1 items-center transition-colors border-2 border-neon-red text-neon-red bg-dark-bg/40 uppercase shadow-neon-red`}
     >
-      <Icon size={24} />
+      <Icon size={16} />
       {text}
     </a>
-  );
-};
+  )
+}

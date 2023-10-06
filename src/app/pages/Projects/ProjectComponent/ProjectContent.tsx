@@ -1,14 +1,13 @@
-import { Space_Mono } from "next/font/google";
-import { ReactNode } from "react";
-import { FaGithub, FaPlay } from "react-icons/fa";
+import { JetBrains_Mono } from 'next/font/google'
+import { ReactNode } from 'react'
 
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] })
 
 interface ProjectProps {
-  name: string;
-  description: string;
-  stack: string[];
-  children: ReactNode;
+  name: string
+  description: string
+  stack: string[]
+  children: ReactNode
 }
 
 export const ProjectContent: React.FC<ProjectProps> = ({
@@ -18,9 +17,11 @@ export const ProjectContent: React.FC<ProjectProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col justify-between items-center lg:items-start gap-3 p-4">
+    <div
+      className={`flex flex-col justify-between gap-1 items-center lg:items-start ${jetbrains.className}`}
+    >
       <h3
-        className={`${spaceMono.className} text-2xl font-bold flex items-center gap-2 before:w-3 before:h-3 before:bg-white`}
+        className={` text-neon-blue drop-shadow-neon-blue select-none text-2xl font-bold flex items-center gap-2 before:w-2 before:h-2 before:bg-neon-blue`}
       >
         {name}
       </h3>
@@ -32,5 +33,5 @@ export const ProjectContent: React.FC<ProjectProps> = ({
       </ul>
       <div className="flex gap-2">{children}</div>
     </div>
-  );
-};
+  )
+}

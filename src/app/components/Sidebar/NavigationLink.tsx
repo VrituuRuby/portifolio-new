@@ -1,5 +1,5 @@
 "use client";
-import DecodeEffect from "./DecodeEffect";
+import DecodeEffect from "../DecodeEffect";
 import { Space_Mono } from "next/font/google";
 import { HTMLMotionProps, Variants, motion } from "framer-motion";
 

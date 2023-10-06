@@ -1,13 +1,12 @@
-"use client";
-import { motion } from "framer-motion";
-import React, { useRef } from "react";
+'use client'
+import React, { useRef } from 'react'
 
 const CursorBlob: React.FC = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
-      const { clientX, clientY } = event;
+    document.addEventListener('mousemove', (event) => {
+      const { clientX, clientY } = event
 
       if (cursorRef.current)
         cursorRef.current.animate(
@@ -15,10 +14,10 @@ const CursorBlob: React.FC = () => {
             left: `${clientX}px`,
             top: `${clientY}px`,
           },
-          { duration: 5000, fill: "forwards" }
-        );
-    });
-  }, []);
+          { duration: 5000, fill: 'forwards' },
+        )
+    })
+  }, [])
   return (
     <div
       className="-z-50 h-[800px] opacity-60 aspect-square hidden md:block fixed justify-center left-1/2 top-1/2 items-center rounded-full -translate-x-1/2 -translate-y-1/2"
@@ -52,7 +51,7 @@ const CursorBlob: React.FC = () => {
         </path>
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default CursorBlob;
+export default CursorBlob

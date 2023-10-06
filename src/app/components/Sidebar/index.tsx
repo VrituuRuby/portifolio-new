@@ -2,7 +2,7 @@
 import { Space_Mono } from "next/font/google";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Variants, motion } from "framer-motion";
-import { NavigationLink } from "../NavigationLink";
+import { NavigationLink } from "./NavigationLink";
 import { OutsideLink } from "./OutsideLinks";
 import { useTranslation } from "react-i18next";
 import { ChangeEvent, ChangeEventHandler } from "react";

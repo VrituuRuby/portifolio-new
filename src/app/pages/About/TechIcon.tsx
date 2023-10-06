@@ -1,10 +1,10 @@
-import { Variants, motion } from "framer-motion";
-import React from "react";
+import { Variants, motion } from 'framer-motion'
+import React from 'react'
 
 interface TechIconProps {
-  icon: string;
-  name: string;
-  index: number;
+  icon: string
+  name: string
+  index: number
 }
 
 const items: Variants = {
@@ -22,14 +22,14 @@ const items: Variants = {
       transition: {
         delay: index * 0.05,
       },
-    };
+    }
   },
-};
+}
 
 export const TechIcon: React.FC<TechIconProps> = ({ icon, name, index }) => {
   return (
     <motion.li
-      className="group rounded-full grid place-items-center p-2 bg-dark-blue/75 shadow-md w-14 h-14 aspect-square relative cursor-pointer"
+      className="group rounded-full grid place-items-center p-2 bg-neon-red shadow-neon-red w-14 h-14 aspect-square relative cursor-pointer"
       key={name}
       variants={items}
       custom={index}
@@ -42,5 +42,5 @@ export const TechIcon: React.FC<TechIconProps> = ({ icon, name, index }) => {
       </span>
       <img src={icon} alt={name} className="w-8" />
     </motion.li>
-  );
-};
+  )
+}
