@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
       variants={formVariants}
       initial="hidden"
       whileInView="visible"
-      className={`${jetbrains.className} flex-col flex justify-center items-center lg:min-h-screen max-w-5xl w-full`}
+      className={`${jetbrains.className} flex-col flex justify-center items-center lg:min-h-screen pb-8 max-w-5xl w-full`}
       >
       <div
         className="

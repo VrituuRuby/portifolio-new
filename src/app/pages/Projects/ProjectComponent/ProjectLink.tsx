@@ -17,7 +17,7 @@ export const ProjectLink: React.FC<ProjectLinkProps> = ({
     <a
       {...rest}
       target="_blank"
-      className={`p-1 rounded-md flex gap-1 items-center transition-colors border-2 border-neon-red text-neon-red bg-dark-bg/40 uppercase shadow-neon-red`}
+      className={`p-1 rounded-md flex gap-0.5 font-bold text-base items-center transition-colors border-2 border-neon-red text-neon-red bg-dark-bg/40 uppercase shadow-neon-red`}
     >
       <Icon size={16} />
       {text}

@@ -21,14 +21,24 @@ const Hero: React.FC = () => {
     >
       <div className={`${jetbrains.className} text-white flex flex-col w-full max-w-5xl uppercase text-whte`}>
         <h1
-      className='text-8xl font-bold w-full flex flex-row flex-nowrap justify-between text-center'
+          className='hidden md:text-6xl lg:text-8xl font-bold md:flex justify-between w-full flex-row flex-wrap lg:flex-nowrap text-center'
         >
-          {breakWordIntoLetters('VICTOR  VELOZO')}
+            {breakWordIntoLetters("victor velozo")}
         </h1>
         <h2
-      className='text-[64px] font-bold w-full flex flex-row flex-nowrap justify-between text-cente'
+          className='hidden md:text-4xl lg:text-6xl font-bold md:flex justify-between w-full flex-row flex-wrap lg:flex-nowrap text-center'
         >
-          {breakWordIntoLetters('WEB  DEVELOPER')}
+      {breakWordIntoLetters('WEB DEVELOPER')}
+    </h2>
+        <h1
+          className='flex md:hidden text-5xl items-center justify-center text-center'
+        >
+            Victor Velozo
+        </h1>
+        <h2
+          className='flex md:hidden text-2xl items-center justify-center text-center'
+        >
+          Web Developer
         </h2>
       </div>
 

@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
   return (
     <div
       id="projects"
-      className="flex justify-center items-center max-w-5xl lg:min-h-screen"
+      className="flex justify-center items-center max-w-5xl overflow-x-hidden lg:min-h-screen"
     >
       <div
         className="flex flex-col w-full gap-4"
@@ -71,14 +71,14 @@ const Projects: React.FC = () => {
                   <Project.Link
                     icon={FaGithub}
                     href={gitrepo}
-                    text={t('projects.githubrepo')}
+                    text='GITHUB REPO'
                   />
 
                   {livedemo && (
                     <Project.Link
                       icon={FaPlay}
                       href={livedemo}
-                      text={t('projects.livedemo')}
+                      text='LIVE DEMO'
                     />
                   )}
                 </Project.Content>

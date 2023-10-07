@@ -1,17 +1,17 @@
-"use client";
-import DecodeEffect from "../DecodeEffect";
-import { Space_Mono } from "next/font/google";
-import { HTMLMotionProps, Variants, motion } from "framer-motion";
+'use client'
+import DecodeEffect from '../DecodeEffect'
+import { Space_Mono } from 'next/font/google'
+import { HTMLMotionProps, Variants, motion } from 'framer-motion'
 
-interface NavigationLinkProps extends HTMLMotionProps<"a"> {
-  text: string;
+interface NavigationLinkProps extends HTMLMotionProps<'a'> {
+  text: string
 }
 
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'] })
 
 const bgVariants: Variants = {
   hidden: {
-    x: "-100%",
+    x: '-100%',
     opacity: 0,
     transition: {
       delay: 2,
@@ -25,13 +25,12 @@ const bgVariants: Variants = {
       duration: 0.2,
     },
   },
-};
+}
 
 export const NavigationLink: React.FC<NavigationLinkProps> = ({
   text,
   ...rest
 }) => {
-
   return (
     <motion.a
       {...rest}
@@ -50,10 +49,10 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
       <DecodeEffect
         textContent={text}
         className={
-          "text-white font-bold text-3xl leading-[80%] uppercase z-10 " +
+          'text-white font-bold text-3xl leading-[80%] uppercase z-10 ' +
           spaceMono.className
         }
       ></DecodeEffect>
     </motion.a>
-  );
+  )
 }

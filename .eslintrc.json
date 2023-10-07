@@ -1,5 +1,9 @@
 {
     "extends": [
-        "next"
-    ]
+        "next",
+        "@rocketseat/eslint-config/react"
+    ],
+    "rules": {
+        "camelcase": "off"
+    }
 }

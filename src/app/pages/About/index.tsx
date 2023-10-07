@@ -32,11 +32,11 @@ const About: React.FC = () => {
       id="about"
       className={`min-h-screen max-w-5xl flex flex-col justify-center items-center gap-8 ${jetbrains.className}`}
     >
-      <div className="flex gap-8">
+      <div className="flex flex-col items-center md:flex-row gap-8">
         <img
           src="/avatar.png"
           alt="pixel art avatar"
-          className="h-[235px] rounded-full border-[6px] border-neon-red shadow-neon-red"
+          className="w-full max-w-[400px] md:h-[235px] md:w-[235px] aspect-square rounded-full border-[6px] border-neon-red shadow-neon-red"
         />
         <div className="uppercase flex flex-col justify-between gap-2 text-white">
           <h3 className="drop-shadow-neon-blue text-neon-blue text-4xl">
@@ -52,7 +52,7 @@ const About: React.FC = () => {
       </div>
       <div className="flex flex-col items-center gap-2 w-full">
         <h3 className="drop-shadow-neon-blue text-neon-blue text-2xl">STACK</h3>
-        <motion.ul whileInView="visible" initial="hidden" className="flex w-full justify-between">
+        <motion.ul whileInView="visible" initial="hidden" className="flex w-full flex-wrap items-center gap-4 lg:gap-0 justify-center lg:justify-between ">
           {stackIcons.map((icon, index) => (
             <TechIcon
               icon={icon.iconPath}

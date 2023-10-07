@@ -1,5 +1,6 @@
 'use client'
-import DecodeEffect from '../DecodeEffect'
+import React from 'react'
+import DecodeEffect from '../../DecodeEffect'
 import { JetBrains_Mono } from 'next/font/google'
 
 interface NavigationLinkProps
@@ -15,15 +16,14 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
 }) => {
   return (
     <a
-      className="flex items-center px-8 py-2 relative hover:bg-neon-red transition-colors"
+      className="flex items-center relative hover:bg-neon-red transition-colors"
       {...rest}
     >
       <DecodeEffect
         textContent={text}
-        className={
-          'text-white text-4xl leading-[80%] uppercase z-10 ' +
-          jetbrains.className
-        }
+        className={`
+          text-white text-lg uppercase px-8 py-2 z-10 w-full h-full' ${jetbrains.className}
+        `}
       ></DecodeEffect>
     </a>
   )

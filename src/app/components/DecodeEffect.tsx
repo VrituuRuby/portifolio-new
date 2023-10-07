@@ -34,7 +34,6 @@ const DecodeEffect: React.FC<DecodeEffectProps> = ({
       iterations += 1 / 3;
     }, 30);
   }
-
   return (
     <span onMouseOver={() => randomize()} {...rest}>
       {displayText}

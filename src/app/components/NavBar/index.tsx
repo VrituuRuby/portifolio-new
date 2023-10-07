@@ -1,6 +1,6 @@
 'use client'
-import { NavigationLink } from './NavigationLink'
-import { DropDownButton } from './DropDownButton'
+import { NavigationLink } from './components/NavigationLink'
+import { DropDownButton } from './components/DropDownButton'
 import { useTranslation } from 'react-i18next'
 
 interface NavBarProps {
@@ -8,14 +8,13 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = ({ activeLink }) => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   return (
-    <div className="p-2 flex z-20 w-full justify-center gap-4 fixed">
+    <div className="hidden sm:flex pt-2 justify-center gap-4 top-0 left-1/2 -translate-x-1/2 fixed">
       <nav
         className="
           flex 
           relative
-          max-w-5xl
         bg-dark-bg/60
           backdrop-blur-lg
           items-center
@@ -34,7 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({ activeLink }) => {
         <NavigationLink href="#about" text={t('about.title')} />
         <NavigationLink href="#projects" text={t('projects.title')} />
         <NavigationLink href="#contact" text={t('contact.title')} />
-        <DropDownButton />
+          <DropDownButton />
       </nav>
     </div>
   )

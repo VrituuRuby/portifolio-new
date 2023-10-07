@@ -1,5 +1,5 @@
 import { AnchorHTMLAttributes, ElementType } from 'react'
-import DecodeEffect from '../DecodeEffect'
+import DecodeEffect from '../../DecodeEffect'
 
 interface OutsideLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string
