@@ -14,7 +14,7 @@ export const FormSubmitConfig: React.FC = () => {
       <input
         type="hidden"
         name="_next"
-        value="http://localhost:3000/#contact"
+        value="https://victorvelozo.vercel.app"
       ></input>
       <input type="hidden" name="_template" value="box" />
     </>
