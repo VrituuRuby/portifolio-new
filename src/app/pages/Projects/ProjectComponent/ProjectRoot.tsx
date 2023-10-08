@@ -9,9 +9,9 @@ const projectVariants: Variants = {
   hidden: (index: number) => ({
     opacity: 0,
     x: ifEven(index, '-200px', '200px'),
-    transition:{
-      duration: 0
-    }
+    transition: {
+      duration: 0,
+    },
   }),
   visible: (index: number) => ({
     opacity: 1,

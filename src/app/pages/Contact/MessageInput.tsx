@@ -9,6 +9,7 @@ export const MessageInput: React.FC = () => {
     >
       MESSAGE:
       <textarea
+        required
         name="message"
         id="message"
         placeholder={t('contact.message.placeholder')}

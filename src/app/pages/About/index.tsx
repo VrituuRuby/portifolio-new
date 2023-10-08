@@ -42,12 +42,18 @@ const About: React.FC = () => {
           <h3 className="drop-shadow-neon-blue text-neon-blue text-4xl">
             {t('about.text-title')}
           </h3>
-          <p className="whitespace-pre-line py-2 leading-none text-white">{t('about.description')}</p>
+          <p className="whitespace-pre-line py-2 leading-none text-white">
+            {t('about.description')}
+          </p>
         </div>
       </div>
       <div className="flex flex-col items-center gap-2 w-full">
         <h3 className="drop-shadow-neon-blue text-neon-blue text-2xl">STACK</h3>
-        <motion.ul whileInView="visible" initial="hidden" className="flex w-full flex-wrap items-center gap-4 lg:gap-0 justify-center lg:justify-between ">
+        <motion.ul
+          whileInView="visible"
+          initial="hidden"
+          className="flex w-full flex-wrap items-center gap-4 lg:gap-0 justify-center lg:justify-between "
+        >
           {stackIcons.map((icon, index) => (
             <TechIcon
               icon={icon.iconPath}

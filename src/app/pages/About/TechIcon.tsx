@@ -2,7 +2,7 @@ import { Variants, motion } from 'framer-motion'
 import { Rubik } from 'next/font/google'
 import React from 'react'
 
-const rubik = Rubik({subsets: ["latin"], weight: '400'})
+const rubik = Rubik({ subsets: ['latin'], weight: '400' })
 
 interface TechIconProps {
   icon: string

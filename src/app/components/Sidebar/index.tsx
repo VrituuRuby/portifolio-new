@@ -1,18 +1,18 @@
-"use client";
-import { Space_Mono } from "next/font/google";
-import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
-import { Variants, motion } from "framer-motion";
-import { NavigationLink } from "./NavigationLink";
-import { OutsideLink } from "./OutsideLinks";
-import { useTranslation } from "react-i18next";
-import { ChangeEvent, ChangeEventHandler } from "react";
-import i18n from "@/app/utils/i18n";
-import { LangToggle } from "../LangToggle";
+'use client'
+import { Space_Mono } from 'next/font/google'
+import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { Variants, motion } from 'framer-motion'
+import { NavigationLink } from './NavigationLink'
+import { OutsideLink } from './OutsideLinks'
+import { useTranslation } from 'react-i18next'
+import { ChangeEvent, ChangeEventHandler } from 'react'
+import i18n from '@/app/utils/i18n'
+import { LangToggle } from '../LangToggle'
 interface SidebarProps {
-  activeLink?: string;
+  activeLink?: string
 }
 
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'] })
 
 const container: Variants = {
   hidden: {
@@ -24,17 +24,17 @@ const container: Variants = {
     x: 0,
     transition: {
       duration: 0.2,
-      type: "tween",
+      type: 'tween',
     },
   },
-};
+}
 
 /** @deprecated  Switched to NavBar */
 const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   function onLangChange(event: ChangeEvent<HTMLSelectElement>) {
-    i18n.changeLanguage(event.target.value);
+    i18n.changeLanguage(event.target.value)
   }
 
   return (
@@ -47,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
       <div className="flex flex-col gap-2">
         <h3
           className={
-            spaceMono.className + " text-[#0598CE] flex items-center gap-2"
+            spaceMono.className + ' text-[#0598CE] flex items-center gap-2'
           }
         >
           <span className="bg-[#0598CE] relative rounded-full flex w-2 h-2">
@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
       <nav className="flex-col flex items-start gap-2">
         <h3
           className={
-            spaceMono.className + " text-[#0598CE] flex items-center gap-2"
+            spaceMono.className + ' text-[#0598CE] flex items-center gap-2'
           }
         >
           <span className="bg-[#0598CE] relative rounded-full flex w-2 h-2">
@@ -70,15 +70,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         </h3>
 
         <NavigationLink href="#home" text="home" />
-        <NavigationLink href="#about" text={t("about.title")} />
-        <NavigationLink href="#projects" text={t("projects.title")} />
-        <NavigationLink href="#contact" text={t("contact.title")} />
+        <NavigationLink href="#about" text={t('about.title')} />
+        <NavigationLink href="#projects" text={t('projects.title')} />
+        <NavigationLink href="#contact" text={t('contact.title')} />
       </nav>
 
       <div className="flex flex-1 flex-col justify-end gap-2">
         <h3
           className={
-            spaceMono.className + " text-[#0598CE] flex items-center gap-2"
+            spaceMono.className + ' text-[#0598CE] flex items-center gap-2'
           }
         >
           <span className="bg-[#0598CE] relative rounded-full flex w-2 h-2">
@@ -86,7 +86,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
           </span>
           LINKS
         </h3>
-        <ul className={spaceMono.className + " uppercase flex flex-col gap-2"}>
+        <ul className={spaceMono.className + ' uppercase flex flex-col gap-2'}>
           <li>
             <OutsideLink
               text="Linkedin"
@@ -114,7 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLink }) => {
         </ul>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

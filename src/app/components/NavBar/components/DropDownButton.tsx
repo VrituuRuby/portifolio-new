@@ -17,9 +17,7 @@ export const DropDownButton: React.FC = () => {
     i18n.changeLanguage(lang)
   }
   return (
-    <div
-      className={'relative w-full group h-full ' + jetbrains.className}
-    >
+    <div className={'relative w-full group h-full ' + jetbrains.className}>
       <button className="text-white bg-neon-red flex gap-1 items-center h-full justify-center text-sm px-4 relative ml-auto">
         {displayLang} <FaCaretDown className="text-sm" />
       </button>

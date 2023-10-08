@@ -1,9 +1,9 @@
-import { AnchorHTMLAttributes, ElementType } from "react";
-import DecodeEffect from "../DecodeEffect";
+import { AnchorHTMLAttributes, ElementType } from 'react'
+import DecodeEffect from '../DecodeEffect'
 
 interface OutsideLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  text: string;
-  icon: ElementType;
+  text: string
+  icon: ElementType
 }
 
 export const OutsideLink: React.FC<OutsideLinkProps> = ({
@@ -16,5 +16,5 @@ export const OutsideLink: React.FC<OutsideLinkProps> = ({
       <Icon size="24" />
       <DecodeEffect textContent={text} />
     </a>
-  );
-};
+  )
+}

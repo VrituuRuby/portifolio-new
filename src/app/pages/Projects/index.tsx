@@ -50,9 +50,7 @@ const Projects: React.FC = () => {
       id="projects"
       className="flex justify-center items-center max-w-5xl lg:min-h-screen"
     >
-      <div
-        className="flex flex-col w-full gap-4"
-      >
+      <div className="flex flex-col w-full gap-4">
         <h3
           className={`${jetbrains.className} select-none drop-shadow-neon-blue text-neon-blue text-4xl font-bold uppercase`}
         >
@@ -71,14 +69,14 @@ const Projects: React.FC = () => {
                   <Project.Link
                     icon={FaGithub}
                     href={gitrepo}
-                    text='GITHUB REPO'
+                    text="GITHUB REPO"
                   />
 
                   {livedemo && (
                     <Project.Link
                       icon={FaPlay}
                       href={livedemo}
-                      text='LIVE DEMO'
+                      text="LIVE DEMO"
                     />
                   )}
                 </Project.Content>
