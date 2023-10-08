@@ -30,24 +30,19 @@ const About: React.FC = () => {
   return (
     <div
       id="about"
-      className={`min-h-screen max-w-5xl flex flex-col justify-center items-center gap-8 ${jetbrains.className}`}
+      className={`min-h-screen max-w-5xl grid place-content-center gap-4 ${jetbrains.className}`}
     >
-      <div className="flex flex-col items-center md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row items-center justify-betwee gap-4">
         <img
           src="/avatar.png"
           alt="pixel art avatar"
-          className="w-full max-w-[400px] md:h-[235px] md:w-[235px] aspect-square rounded-full border-[6px] border-neon-red shadow-neon-red"
+          className="max-h-[230px] rounded-full border-[6px] border-neon-red shadow-neon-red"
         />
-        <div className="uppercase flex flex-col justify-between gap-2 text-white">
+        <div className="flex flex-col gap-2 uppercase">
           <h3 className="drop-shadow-neon-blue text-neon-blue text-4xl">
-            {t('about.title')}
+            {t('about.text-title')}
           </h3>
-          <div className="flex flex-col justify-between h-full text-lg">
-            <p>HELLO WORLD 🚀</p>
-            <p>{t('about.description.1')}</p>
-            <p>{t('about.description.2')}</p>
-            <p>{t('about.description.3')}</p>
-          </div>
+          <p className="whitespace-pre-line py-2 leading-none text-white">{t('about.description')}</p>
         </div>
       </div>
       <div className="flex flex-col items-center gap-2 w-full">

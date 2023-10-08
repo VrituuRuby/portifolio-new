@@ -8,15 +8,12 @@ import NavBar from './components/NavBar'
 
 const Main: React.FC = () => {
   return (
-    <div className="flex flex-col px-8">
-      <NavBar />
-      <main className="flex-1 flex flex-col gap-10 justify-between items-center">
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <main className="flex flex-col gap-10 justify-between max-w-5xl overflow-x-hidden px-4 mx-auto items-center">
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+    </main>
   )
 }
 

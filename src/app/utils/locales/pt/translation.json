@@ -1,12 +1,11 @@
 {
   "translation": {
     "home.contact": "entre em contato",
-    "home.resume": "meu currículo",
+    "home.resume": "currículo",
     "home.resume.url": "https://drive.google.com/file/d/1IIw_im3m8NTKCBk3kMxx8C4HzP8DRkQ8/view?usp=sharing",
     "about.title": "sobre",
-    "about.description.1": "Sou um desenvolvedor fullstack que ama criar sites charmosos.",
-    "about.description.2": "Atualmente, tenho trabalhado em projetos pessoas para meu portifólio enquanto exploro e testo novas tecnologias.",
-    "about.description.3": "Minhas paixões incluem tecnologia, música e explorar a criatividade.",
+    "about.text-title": "Sobre mim",
+    "about.description":"Hello World 🚀\n\n Sou um desenvolvedor fullstack que adora criar visualmente atrativos.\n\nAtualmente, estou trabalhando em projetos pessoais para este portifolio equanto exploro novas tecnologias. Minhas paixões incluem tecnologia, música, jogos indie e qualquer coisa que estimule a criatividade.",
     "projects.title": "projetos",
     "projects.githubrepo": "Repositório Github",
     "projects.livedemo": "Demonstração ao Vivo",

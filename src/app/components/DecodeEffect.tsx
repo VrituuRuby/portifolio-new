@@ -35,9 +35,9 @@ const DecodeEffect: React.FC<DecodeEffectProps> = ({
     }, 30);
   }
   return (
-    <span onMouseOver={() => randomize()} {...rest}>
+    <p onMouseOver={() => randomize()} {...rest}>
       {displayText}
-    </span>
+    </p>
   );
 };
 
