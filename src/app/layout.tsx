@@ -15,12 +15,13 @@ export default function RootLayout({
       <head>
         <title>Victor Velozo - Fullstack WebDev</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="Victor Velozo - Fullstack Web developer | ReactJS | NodeJS | TypeScript"
+        />
       </head>
-      <body
-        className={`${inter.className} before:backdrop-blur-[150px] 
-        before:-z-10 before:left-0 before:top-0 before:fixed before:w-screen before:h-screen
-      `}
-      >
+      <body className={`${inter.className}`}>
+        <div className="w-screen h-screen backdrop-blur-[100px] -z-[10] fixed top-0 left-0" />
         <CursorBlob />
         {children}
         <NavBar />

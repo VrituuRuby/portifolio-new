@@ -1,5 +1,6 @@
 import i18n from '@/app/utils/i18n'
 import { JetBrains_Mono } from 'next/font/google'
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { FaCaretDown } from 'react-icons/fa'
 
@@ -25,18 +26,28 @@ export const DropDownButton: React.FC = () => {
         <li className="hover:text-neon-red text-left relative">
           <div className="w-2 h-[1px] bg-neon-red absolute left-0 top-[50%] -translate-y-1/2"></div>
           <button
-            className="p-2 px-4 w-full text-left"
+            className="p-2 px-4 w-full text-left flex gap-2 items-center"
             onClick={() => changeLanguage('pt-BR')}
           >
-            PORTUGUÊS (BR)
+            <img
+              alt="brazil flag"
+              src="/br.png"
+              className="w-6 aspect-[10/7]"
+            />
+            PORTUGUÊS
           </button>
         </li>
         <li className="hover:text-neon-red text-left relative">
           <div className="w-2 h-[1px] bg-neon-red absolute left-0 top-[50%] -translate-y-1/2"></div>
           <button
-            className="p-2 px-4 w-full text-left"
+            className="p-2 px-4 w-full text-left flex gap-2 items-center"
             onClick={() => changeLanguage('en-US')}
           >
+            <img
+              alt="united states flag"
+              src="/us.png"
+              className="w-6 aspect-[10/7]"
+            />
             ENGLISH
           </button>
         </li>

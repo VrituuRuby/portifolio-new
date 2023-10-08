@@ -20,10 +20,11 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
       {...rest}
     >
       <DecodeEffect
-        textContent={text}
         className={`text-white text-lg whitespace-nowrap uppercase p-2 md:px-4 lg:px-8 z-10' ${jetbrains.className}
         `}
-      />
+      >
+        {text}
+      </DecodeEffect>
     </a>
   )
 }

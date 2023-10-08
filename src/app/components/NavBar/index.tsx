@@ -35,7 +35,11 @@ const NavBar: React.FC<NavBarProps> = ({ activeLink }) => {
         <NavigationLink href="#about" text={t('about.title')} />
         <NavigationLink href="#projects" text={t('projects.title')} />
         <NavigationLink href="#contact" text={t('contact.title')} />
-        <NavigationLink href={t('home.resume.url')} text={t('home.resume')} />
+        <NavigationLink
+          href={t('home.resume.url')}
+          target="_blank"
+          text={t('home.resume')}
+        />
         <DropDownButton />
       </nav>
       <a

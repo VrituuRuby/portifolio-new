@@ -20,7 +20,7 @@ export const OutsideLink: React.FC<OutsideLinkProps> = ({
       {...rest}
     >
       <Icon size={24} />
-      <DecodeEffect textContent={display} />
+      <DecodeEffect>{display}</DecodeEffect>
     </a>
   )
 }

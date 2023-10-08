@@ -11,11 +11,12 @@ const config: Config = {
       keyframes: {
         blobSpin: {
           from: { rotate: '0deg' },
+          '50%': { scale: '1 1.5' },
           to: { rotate: '360deg' },
         },
       },
       animation: {
-        'blob-spin': 'blobSpin 20s linear infinite',
+        'blob-spin': 'blobSpin 20s infinite',
       },
       colors: {
         'dark-bg': '#0F0514',
