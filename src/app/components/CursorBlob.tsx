@@ -20,7 +20,7 @@ const CursorBlob: React.FC = () => {
   }, [])
   return (
     <div
-      className="-z-50 h-[800px] aspect-square fixed justify-center left-1/2 top-1/2 items-center rounded-full -translate-x-1/2 -translate-y-1/2"
+      className="hidden sm:flex -z-50 h-[800px] aspect-square fixed justify-center left-1/2 top-1/2 items-center rounded-full -translate-x-1/2 -translate-y-1/2"
       ref={cursorRef}
     >
       <svg
