@@ -1,4 +1,4 @@
-import DecodeEffect from '@/app/components/DecodeEffect'
+import { useDecryptTextEffectReturn } from '@/hook/useDecryptTextEffect'
 import React from 'react'
 import { IconType } from 'react-icons'
 
@@ -13,14 +13,17 @@ export const OutsideLink: React.FC<OutsideLinkProps> = ({
   Icon,
   ...rest
 }) => {
+  const { decryptEffect, displayText } = useDecryptTextEffectReturn(display)
+
   return (
     <a
+      onMouseEnter={() => decryptEffect()}
       target="_blank"
       className="flex gap-2 items-center justify-center px-2 hover:drop-shadow-neon-red hover:text-neon-red"
       {...rest}
     >
       <Icon size={24} />
-      <DecodeEffect textContent={display} />
+      {displayText}
     </a>
   )
 }
